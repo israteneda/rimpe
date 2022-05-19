@@ -1,14 +1,15 @@
 import tornado.ioloop
 import tornado.web
+from handlers import base
 
-class MainHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.write("Hello, world")
 
 def make_app():
-    return tornado.web.Application([
-        (r"/", MainHandler),
-    ])
+    return tornado.web.Application(
+        [
+            (r"/", base.BaseHandler),
+        ]
+    )
+
 
 if __name__ == "__main__":
     app = make_app()
