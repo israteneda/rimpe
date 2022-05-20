@@ -1,13 +1,14 @@
 import tornado.ioloop
 import tornado.web
-from handlers import base
+from handlers import home
 
 
 def make_app():
     return tornado.web.Application(
-        [
-            (r"/", base.BaseHandler),
-        ]
+        debug=True,
+        handlers=[
+            (r"/", home.HomeHandler),
+        ],
     )
 
 

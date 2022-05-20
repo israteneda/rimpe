@@ -1,0 +1,10 @@
+extends ../templates/layout.jade
+
+block content
+    head
+        h1.mt-5#title Búsqueda RIMPE
+        p Chequéa si eres parte del Régimen Simplificado Para Emprendedores y Negocios Populares
+        .input-group
+            input.form-control(type="text", placeholder="RUC")
+            button.btn.btn-primary(type="button") 
+                i.bi.bi-search
