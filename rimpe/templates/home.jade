@@ -5,7 +5,10 @@ block content
         h1.mt-5#title Búsqueda RIMPE
         p Chequéa si eres parte del Régimen Simplificado Para Emprendedores y Negocios Populares
         .form-check.form-check-inline        
-            input.form-check-input(type="radio", name="tipoDeRegimen", id="radioRegimenNP", value="negociosPopulares", checked)
+            input.form-check-input(type="radio", name="tipoDeRegimen", id="radioRegimenC", value="cualquiera", checked)
+            label.form-check-label(for="radioRegimenC") Cualquiera
+        .form-check.form-check-inline        
+            input.form-check-input(type="radio", name="tipoDeRegimen", id="radioRegimenNP", value="negociosPopulares")
             label.form-check-label(for="radioRegimenNP") Negocios Populares&nbsp;
                 i.bi.bi-info-circle#negocios-populares(data-bs-toggle="tooltip", data-bs-placement="right", title="Personas naturales y jurídicas con ingresos brutos anuales de hasta USD 300.000 (al 31 de diciembre del año anterior).")
         .form-check.form-check-inline
