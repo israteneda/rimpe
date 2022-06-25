@@ -65,11 +65,14 @@ ROBOTSTXT_OBEY = True
 # ITEM_PIPELINES = {
 #    'scraper.pipelines.ScraperPipeline': 300,
 # }
-ITEM_PIPELINES = {"scrapy.pipelines.files.FilesPipeline": 1}
+ITEM_PIPELINES = {
+    "scrapy.pipelines.files.FilesPipeline": 100,
+    "scraper.pipelines.ScraperPipeline": 300,
+}
 
 DOWNLOAD_TIMEOUT = 1200
 
-FILES_STORE = "/Users/israteneda/Downloads"
+FILES_STORE = "../data"
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

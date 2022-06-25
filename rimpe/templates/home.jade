@@ -10,7 +10,11 @@ block content
         .form-check.form-check-inline        
             input.form-check-input(type="radio", name="tipoDeRegimen", id="radioRegimenNP", value="negociosPopulares")
             label.form-check-label(for="radioRegimenNP") Negocios Populares&nbsp;
-                i.bi.bi-info-circle#negocios-populares(data-bs-toggle="tooltip", data-bs-placement="right", title="Personas naturales y jurídicas con ingresos brutos anuales de hasta USD 300.000 (al 31 de diciembre del año anterior).")
+                i.bi.bi-info-circle#negocios-populares(
+                data-bs-toggle="tooltip",
+                data-bs-placement="right",
+                title="Personas naturales y jurídicas con ingresos brutos anuales de hasta USD 300.000 (al 31 de diciembre del año anterior)."
+            )
         .form-check.form-check-inline
             input.form-check-input(type="radio", name="tipoDeRegimen", id="radioRegimenE", value="emprendedores")
             label.form-check-label(for="radioRegimenE") Emprendedores&nbsp;

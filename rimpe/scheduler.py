@@ -2,7 +2,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 
-sched = BlockingScheduler()
+schedule = BlockingScheduler()
 settings = get_project_settings()
 process = CrawlerProcess(settings)
 
@@ -13,9 +13,9 @@ process = CrawlerProcess(settings)
 #     print("This job is run every three seconds.")
 
 
-@sched.scheduled_job("cron", day_of_week="mon-sun", hour=00, minute=00)
+@schedule.scheduled_job("cron", day_of_week="mon-sun", hour=00, minute=00)
 def scheduled_job():
     print("This job is executed every day at midnight.")
 
 
-sched.start()
+schedule.start()
